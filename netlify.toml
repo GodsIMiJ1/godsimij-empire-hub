@@ -1,6 +1,5 @@
 [build]
   publish = "."
-  command = "echo 'GodsIMiJ Empire Hub - Static Site Ready for Deployment! 🔥'"
 
 [build.environment]
   NODE_VERSION = "18"
