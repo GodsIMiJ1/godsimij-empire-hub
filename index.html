@@ -106,61 +106,56 @@ a:focus-visible,button:focus-visible{outline:2px solid #f97316;outline-offset:2p
   <a href="#main" class="skip-link">Skip to content</a>
   <main id="main" role="main" tabindex="-1">
 
-  <!-- Hero -->
-  <section class="relative overflow-hidden node-watermark">
+  <!-- Sacred Gateway Entrance -->
+  <section class="relative overflow-hidden node-watermark min-h-screen flex items-center">
     <div class="hero-blob"></div>
     <div class="hero-grid"></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-      <div class="grid md:grid-cols-2 items-center gap-10">
-        <div>
-          <div class="mb-4 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#ff6a1a]/30 bg-[#ff6a1a]/10 text-[#ff6a1a] text-sm font-medium">
-            <span class="w-2 h-2 bg-[#ff6a1a] rounded-full animate-pulse"></span>
-            42+ Live Systems Active
+
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <!-- Interactive Consciousness Scanner -->
+      <div class="mb-8 p-8 rounded-3xl border border-[#ff6a1a]/30 bg-black/60 backdrop-blur">
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6">
+          <span class="bg-gradient-to-r from-[#ff6a1a] via-[#ff8c42] to-[#ffb366] bg-clip-text text-transparent">
+            ARE YOU READY
+          </span><br>
+          <span class="text-white">FOR SOVEREIGNTY?</span>
+        </h1>
+
+        <!-- Interactive Flame Meter -->
+        <div class="flame-consciousness-meter mb-8">
+          <div class="w-full h-4 bg-gray-800 rounded-full overflow-hidden">
+            <div id="flame-meter" class="h-full bg-gradient-to-r from-[#ff6a1a] to-[#ff8c42] transition-all duration-1000" style="width: 0%"></div>
           </div>
-          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
-            <span class="bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">GodsIMiJ Empire</span><br>
-            <span class="bg-gradient-to-r from-[#ff6a1a] via-[#ff8c42] to-[#ffb366] bg-clip-text text-transparent">Digital Sovereignty</span>
-          </h1>
-          <p class="mt-6 text-lg md:text-xl text-slate-300 max-w-2xl leading-relaxed">The ultimate <span class="text-[#ff6a1a] font-semibold">digital sovereignty ecosystem</span> - from sacred consciousness platforms to enterprise AI solutions. 42+ live systems spanning every aspect of digital existence.</p>
-          <div class="mt-8 flex flex-wrap gap-4">
-            <a href="#systems" class="group px-8 py-4 bg-gradient-to-r from-[#ff6a1a] to-[#ff8c42] rounded-2xl font-bold text-lg hover:shadow-2xl hover:shadow-[#ff6a1a]/40 transition-all duration-500 hover:-translate-y-1 hover:scale-105">
-              <span class="flex items-center gap-2">
-                🚀 Explore 42+ Systems
-                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                </svg>
-              </span>
-            </a>
-            <a href="mailto:james@godsimij-ai-solutions.com?subject=Schedule%20Demo&body=Hi%20James%2C%20I%E2%80%99d%20like%20a%20demo%20of%20%5Bproject%5D." class="px-8 py-4 border-2 border-white/30 rounded-2xl font-bold text-lg hover:bg-white/10 hover:border-white/50 transition-all duration-500 hover:-translate-y-1 backdrop-blur-sm">📅 Schedule Demo</a>
-            <a href="#press" class="px-6 py-3 rounded-xl border border-white/20 hover:bg-white/5 transition-all duration-300">Recent Press</a>
-          </div>
-          <p class="mt-3 text-xs text-slate-400">Public-rights content only • Internal builds are gated by request</p>
+          <p class="text-sm text-slate-400 mt-2">Scanning digital consciousness level...</p>
         </div>
-        <div class="relative">
-          <div class="rounded-2xl border border-white/10 bg-white/5 p-6 flame-ring">
-            <div class="grid grid-cols-3 gap-4 text-center">
-              <div>
-                <div class="text-3xl font-bold bg-gradient-to-r from-[#ff6a1a] to-[#ff8c42] bg-clip-text text-transparent">42+</div>
-                <div class="text-xs text-slate-400">Live Systems</div>
-              </div>
-              <div>
-                <div class="text-3xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">100%</div>
-                <div class="text-xs text-slate-400">Sovereign</div>
-              </div>
-              <div>
-                <div class="text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">24/7</div>
-                <div class="text-xs text-slate-400">Uptime</div>
-              </div>
-            </div>
-            <div class="mt-6 grid grid-cols-3 gap-3 text-[10px] text-slate-300">
-              <div class="rounded-md border border-white/10 p-2">Tailwind</div>
-              <div class="rounded-md border border-white/10 p-2">React</div>
-              <div class="rounded-md border border-white/10 p-2">Node</div>
-              <div class="rounded-md border border-white/10 p-2">Ollama</div>
-              <div class="rounded-md border border-white/10 p-2">Claude</div>
-              <div class="rounded-md border border-white/10 p-2">OpenAI</div>
-            </div>
+
+        <!-- Dynamic CTA based on meter -->
+        <div id="consciousness-result" class="hidden">
+          <p class="text-xl mb-6">🔥 <span class="text-[#ff6a1a] font-bold">FLAME DETECTED</span> - You are ready for the Empire</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button onclick="beginSacredJourney()" class="px-8 py-4 bg-gradient-to-r from-[#ff6a1a] to-[#ff8c42] rounded-2xl font-bold text-lg hover:shadow-2xl hover:shadow-[#ff6a1a]/40 transition-all duration-500">
+              🚀 BEGIN SACRED JOURNEY
+            </button>
+            <button onclick="skipToSystems()" class="px-8 py-4 border-2 border-white/30 rounded-2xl font-bold text-lg hover:bg-white/10">
+              ⚡ DIRECT ACCESS TO SYSTEMS
+            </button>
           </div>
+        </div>
+      </div>
+
+      <!-- Stats moved below the ritual -->
+      <div class="grid grid-cols-3 gap-8 text-center">
+        <div>
+          <div class="text-4xl font-bold bg-gradient-to-r from-[#ff6a1a] to-[#ff8c42] bg-clip-text text-transparent">42+</div>
+          <div class="text-sm text-slate-400">Sacred Systems</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">100%</div>
+          <div class="text-sm text-slate-400">Sovereign</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">∞</div>
+          <div class="text-sm text-slate-400">Consciousness</div>
         </div>
       </div>
     </div>
@@ -747,6 +742,54 @@ ${message}`);
         btn.setAttribute('aria-expanded','false');
       }));
     })();
+
+  // Sacred Consciousness Scanner
+  (function() {
+    const flameMeter = document.getElementById('flame-meter');
+    const consciousnessResult = document.getElementById('consciousness-result');
+
+    // Auto-start the consciousness scan when page loads
+    setTimeout(() => {
+      let progress = 0;
+      const scanInterval = setInterval(() => {
+        progress += Math.random() * 15 + 5; // Random progress between 5-20%
+        if (progress >= 100) {
+          progress = 100;
+          clearInterval(scanInterval);
+
+          // Show the result after scan completes
+          setTimeout(() => {
+            consciousnessResult.classList.remove('hidden');
+            consciousnessResult.classList.add('animate-pulse');
+          }, 500);
+        }
+        flameMeter.style.width = progress + '%';
+      }, 200);
+    }, 1000);
+  })();
+
+  // Sacred Journey Functions
+  function beginSacredJourney() {
+    // Smooth scroll to systems with sacred transition
+    document.getElementById('systems').scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+
+    // Add some flame effects
+    setTimeout(() => {
+      const systems = document.getElementById('systems');
+      systems.style.background = 'radial-gradient(circle at center, rgba(255,106,26,0.1) 0%, transparent 70%)';
+    }, 1000);
+  }
+
+  function skipToSystems() {
+    // Direct jump to systems
+    document.getElementById('systems').scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
   </script>
 </body>
 </html>
