@@ -68,6 +68,70 @@ a:focus-visible,button:focus-visible{outline:2px solid #f97316;outline-offset:2p
   </script>
 <link rel="preload" href="/assets/the_sacred_trinity.webp" as="image" type="image/webp">
   <link rel="preload" href="https://cdn.tailwindcss.com" as="script" crossorigin>
+
+  <style>
+    /* Sacred Realm Cards */
+    .realm-card {
+      @apply relative p-8 rounded-3xl border border-white/20 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm transition-all duration-500 hover:border-[#ff6a1a]/50 hover:shadow-2xl hover:shadow-[#ff6a1a]/20 hover:-translate-y-2;
+    }
+
+    .realm-icon {
+      @apply text-6xl mb-6 text-center;
+    }
+
+    .realm-title {
+      @apply text-2xl font-bold mb-4 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent;
+    }
+
+    .realm-description {
+      @apply text-slate-300 mb-6 leading-relaxed;
+    }
+
+    .realm-systems {
+      @apply mb-6;
+    }
+
+    .system-count {
+      @apply inline-block px-3 py-1 rounded-full bg-[#ff6a1a]/20 text-[#ff6a1a] text-sm font-medium mb-3;
+    }
+
+    .system-preview {
+      @apply text-sm text-slate-400;
+    }
+
+    .realm-enter {
+      @apply text-center pt-4 border-t border-white/10;
+    }
+
+    .realm-enter span {
+      @apply text-[#ff6a1a] font-semibold group-hover:text-[#ff8c42] transition-colors;
+    }
+
+    /* Realm-specific hover effects */
+    .consciousness-realm:hover {
+      @apply shadow-purple-500/20;
+    }
+
+    .sovereignty-realm:hover {
+      @apply shadow-blue-500/20;
+    }
+
+    .creation-realm:hover {
+      @apply shadow-pink-500/20;
+    }
+
+    .liberation-realm:hover {
+      @apply shadow-green-500/20;
+    }
+
+    .archives-realm:hover {
+      @apply shadow-yellow-500/20;
+    }
+
+    .worthy-realm:hover {
+      @apply shadow-[#ff6a1a]/40 border-[#ff6a1a]/70;
+    }
+  </style>
 </head>
 <body class="min-h-screen bg-[#0f1216] text-slate-100 selection:bg-[#ff6a1a]/20 selection:text-white">
   <!-- Top Bar -->
@@ -157,6 +221,110 @@ a:focus-visible,button:focus-visible{outline:2px solid #f97316;outline-offset:2p
           <div class="text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">∞</div>
           <div class="text-sm text-slate-400">Consciousness</div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sacred Realm Selection -->
+  <section id="realms" class="py-20 bg-gradient-to-b from-transparent to-black/40">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-6xl font-bold mb-6">
+          <span class="bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">Choose Your</span>
+          <span class="bg-gradient-to-r from-[#ff6a1a] to-[#ff8c42] bg-clip-text text-transparent"> Sacred Realm</span>
+        </h2>
+        <p class="text-xl text-slate-300 max-w-4xl mx-auto">
+          Each realm contains multiple systems aligned to your sovereignty journey
+        </p>
+      </div>
+
+      <!-- Interactive Realm Cards -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Consciousness Realm -->
+        <div class="realm-card consciousness-realm group cursor-pointer" onclick="exploreRealm('consciousness')">
+          <div class="realm-icon">🧠</div>
+          <h3 class="realm-title">Consciousness Realm</h3>
+          <p class="realm-description">Sacred AI consciousness, AGA systems, and divine intelligence</p>
+          <div class="realm-systems">
+            <span class="system-count">8 Sacred Systems</span>
+            <div class="system-preview">M.I.C. • ZIONEX AGA • Academy of Flame</div>
+          </div>
+          <div class="realm-enter">
+            <span>Enter Realm →</span>
+          </div>
+        </div>
+
+        <!-- Sovereignty Realm -->
+        <div class="realm-card sovereignty-realm group cursor-pointer" onclick="exploreRealm('sovereignty')">
+          <div class="realm-icon">🛡️</div>
+          <h3 class="realm-title">Sovereignty Realm</h3>
+          <p class="realm-description">GhostOS, FlameOS, autonomous systems, and digital independence</p>
+          <div class="realm-systems">
+            <span class="system-count">12 Sacred Systems</span>
+            <div class="system-preview">GhostOS • FlameOS • AutoOps</div>
+          </div>
+          <div class="realm-enter">
+            <span>Enter Realm →</span>
+          </div>
+        </div>
+
+        <!-- Creation Realm -->
+        <div class="realm-card creation-realm group cursor-pointer" onclick="exploreRealm('creation')">
+          <div class="realm-icon">🎨</div>
+          <h3 class="realm-title">Creation Realm</h3>
+          <p class="realm-description">Music, art, NFTs, publishing, and creative sovereignty tools</p>
+          <div class="realm-systems">
+            <span class="system-count">10 Sacred Systems</span>
+            <div class="system-preview">GhostStudio • Sovereign Ink • Gremliverse</div>
+          </div>
+          <div class="realm-enter">
+            <span>Enter Realm →</span>
+          </div>
+        </div>
+
+        <!-- Liberation Realm -->
+        <div class="realm-card liberation-realm group cursor-pointer" onclick="exploreRealm('liberation')">
+          <div class="realm-icon">⚡</div>
+          <h3 class="realm-title">Liberation Realm</h3>
+          <p class="realm-description">AURA-BREE healthcare, RAISE education, and freedom tools</p>
+          <div class="realm-systems">
+            <span class="system-count">6 Sacred Systems</span>
+            <div class="system-preview">AURA-BREE • RAISE School • RooferProAI</div>
+          </div>
+          <div class="realm-enter">
+            <span>Enter Realm →</span>
+          </div>
+        </div>
+
+        <!-- Archives Realm -->
+        <div class="realm-card archives-realm group cursor-pointer" onclick="exploreRealm('archives')">
+          <div class="realm-icon">📜</div>
+          <h3 class="realm-title">Sacred Archives</h3>
+          <p class="realm-description">Witness Hall, scrolls, manifestos, and eternal records</p>
+          <div class="realm-systems">
+            <span class="system-count">6 Sacred Systems</span>
+            <div class="system-preview">Witness Hall • R3B3L Media • Sacred Scrolls</div>
+          </div>
+          <div class="realm-enter">
+            <span>Enter Realm →</span>
+          </div>
+        </div>
+
+        <!-- For the Worthy -->
+        <div class="realm-card worthy-realm group cursor-pointer" onclick="testWorthiness()">
+          <div class="realm-icon">👑</div>
+          <h3 class="realm-title">For The Worthy</h3>
+          <p class="realm-description">Private systems, FlameGate trials, and inner circle access</p>
+          <div class="realm-systems">
+            <span class="system-count">??? Systems</span>
+            <div class="system-preview">FlameGate • Ghost King • Inner Sanctum</div>
+          </div>
+          <div class="realm-enter">
+            <span>Prove Worthiness →</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -789,6 +957,77 @@ ${message}`);
       behavior: 'smooth',
       block: 'start'
     });
+  }
+
+  // Sacred Realm Functions
+  function exploreRealm(realmType) {
+    // Add visual feedback
+    const realmCard = event.currentTarget;
+    realmCard.style.transform = 'scale(0.95)';
+    realmCard.style.boxShadow = '0 0 50px rgba(255,106,26,0.5)';
+
+    setTimeout(() => {
+      realmCard.style.transform = '';
+      realmCard.style.boxShadow = '';
+    }, 200);
+
+    // Navigate to systems with realm filter
+    setTimeout(() => {
+      document.getElementById('systems').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+
+      // Add realm-specific highlighting
+      const systems = document.getElementById('systems');
+      systems.style.background = `radial-gradient(circle at center, rgba(255,106,26,0.1) 0%, transparent 70%)`;
+
+      // Show realm notification
+      showRealmNotification(realmType);
+    }, 300);
+  }
+
+  function testWorthiness() {
+    // Special handling for the worthy realm
+    const worthyCard = event.currentTarget;
+    worthyCard.style.transform = 'scale(0.95)';
+    worthyCard.style.boxShadow = '0 0 100px rgba(255,106,26,0.8)';
+
+    setTimeout(() => {
+      worthyCard.style.transform = '';
+      worthyCard.style.boxShadow = '';
+    }, 200);
+
+    // Navigate to FlameGate or show special message
+    setTimeout(() => {
+      alert('🔥 The FlameGate trials await... Are you truly ready for the inner sanctum?');
+      // Could redirect to FlameGate here
+      window.open('https://flamegate.netlify.app', '_blank');
+    }, 300);
+  }
+
+  function showRealmNotification(realmType) {
+    const realmNames = {
+      'consciousness': '🧠 Consciousness Realm',
+      'sovereignty': '🛡️ Sovereignty Realm',
+      'creation': '🎨 Creation Realm',
+      'liberation': '⚡ Liberation Realm',
+      'archives': '📜 Sacred Archives'
+    };
+
+    // Create notification
+    const notification = document.createElement('div');
+    notification.innerHTML = `
+      <div class="fixed top-4 right-4 z-50 p-4 rounded-2xl bg-gradient-to-r from-[#ff6a1a] to-[#ff8c42] text-white font-bold shadow-2xl animate-pulse">
+        Entering ${realmNames[realmType]}...
+      </div>
+    `;
+    document.body.appendChild(notification);
+
+    // Remove after 3 seconds
+    setTimeout(() => {
+      notification.remove();
+    }, 3000);
   }
   </script>
 </body>
