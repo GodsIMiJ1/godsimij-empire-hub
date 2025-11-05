@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Quantum Odyssey — GodsIMiJ Empire</title>
-  <meta name="description" content="Custom AI systems and sovereign solutions for clinics, schools, and innovators. Live applications, AI agents, and custom builds by GodsIMiJ AI Solutions in Pembroke, ON." />
+  <meta name="description" content="GodsIMiJ AI Solutions – the world’s first sovereign, audit-ready AI ecosystem. Featuring GhostVault, FlameRouter, WhisperNet and fully offline AI agents." />
   <meta property="og:title" content="Quantum Odyssey — Digital Sovereign Empire" />
   <meta property="og:description" content="Explore live apps, AI agents, Witness Hall archives, and press features from GodsIMiJ AI Solutions." />
   <meta property="og:type" content="website" />
@@ -14,6 +14,7 @@
   <link rel="icon" type="image/png" href="/assets/FlameOS_favicon.png" />
   <link rel="apple-touch-icon" href="/assets/FlameOS_favicon.png" />
   <meta name="theme-color" content="#0f1216" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     /* NODE watermark placeholder — replace url(...) with your actual NODE seal asset */
@@ -147,6 +148,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #f97316;outline-offset:2p
         <a href="#agents" class="hover:text-white/90 text-slate-300">Agents</a>
         <a href="#press" class="hover:text-white/90 text-slate-300">Press</a>
         <a href="#witness" class="hover:text-white/90 text-slate-300">Witness Hall</a>
+        <a href="#audit-readiness" class="hover:text-white/90 text-slate-300">Audit Ready</a>
         <a href="#contact" class="hover:text-white/90 text-slate-300">Contact</a>
       </nav>
       <button class="md:hidden" id="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -162,6 +164,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #f97316;outline-offset:2p
         <a href="#agents" class="hover:text-white/90 text-slate-300">Agents</a>
         <a href="#press" class="hover:text-white/90 text-slate-300">Press</a>
         <a href="#witness" class="hover:text-white/90 text-slate-300">Witness Hall</a>
+        <a href="#audit-readiness" class="hover:text-white/90 text-slate-300">Audit Ready</a>
         <a href="#contact" class="hover:text-white/90 text-slate-300">Contact</a>
       </div>
     </div>
@@ -848,11 +851,12 @@ a:focus-visible,button:focus-visible{outline:2px solid #f97316;outline-offset:2p
   <!-- === AUDIT READINESS SECTION === -->
   <section id="audit-readiness" class="py-20 bg-gradient-to-b from-transparent via-black/30 to-black/10 border-t border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm p-10 md:p-12 space-y-12 shadow-2xl shadow-black/30">
-        <div class="space-y-4">
+      <div class="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm p-8 sm:p-10 md:p-12 space-y-10 md:space-y-12 shadow-2xl shadow-black/30">
+        <div class="space-y-4 sm:space-y-5">
           <p class="text-sm tracking-wide uppercase text-orange-300/80">Audit Readiness</p>
           <h2 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-white to-slate-200 bg-clip-text text-transparent">GodsIMiJ AI Solutions</h2>
           <h3 class="text-lg text-slate-300">The World’s First Sovereign, Audit-Ready AI Ecosystem</h3>
+          <p class="text-sm text-green-400 mt-2 uppercase tracking-widest">LAN Only • Zero Cloud • Fully Sovereign</p>
           <p class="text-sm text-slate-400 leading-relaxed">
             <strong class="text-slate-200">Contact:</strong> James Derek Ingersoll<br/>
             Founder &amp; Full Stack AI Developer<br/>
@@ -928,6 +932,9 @@ a:focus-visible,button:focus-visible{outline:2px solid #f97316;outline-offset:2p
             <span>📞 <strong class="text-white">Phone:</strong> 613-318-9711</span>
           </p>
         </div>
+        <div class="text-center mt-8 sticky bottom-6 md:static">
+          <a id="audit-cta" href="mailto:james@godsimij-ai-solutions.com" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-full transition shadow-lg shadow-orange-500/30">Request Audit Review</a>
+        </div>
       </div>
     </div>
   </section>
@@ -966,6 +973,16 @@ Email: ${email}
 Project:
 ${message}`);
         window.location.href = `mailto:james@godsimij-ai-solutions.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+      });
+    })();
+
+    // Audit CTA tracking
+    (function () {
+      const auditCta = document.getElementById('audit-cta');
+      if (!auditCta) return;
+      auditCta.addEventListener('click', () => {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'audit_cta_click' });
       });
     })();
 
